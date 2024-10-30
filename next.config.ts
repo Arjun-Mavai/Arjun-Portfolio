@@ -1,7 +1,34 @@
-import type { NextConfig } from "next";
+// import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+// const nextConfig: NextConfig = {
+//   /* config options here */
+// };
+
+// export default nextConfig;
+
+
+/** @type {import('next').NextConfig} */
+
+const allowedHostnames = [
+  "example.com",
+  "img.icons8.com",
+  "s3-alpha.figma.com",
+  "cdn.prod.website-files.com",
+  "c8.alamy.com",
+  "i.vimeocdn.com",
+  "toolset.com",
+  "lreclvqyoujucqaggxfy.supabase.co",
+  "gallerypng.com",
+  "images.unsplash.com" 
+];
+
+const nextConfig = {
+  images: {
+    remotePatterns: allowedHostnames.map((hostname) => ({
+      protocol: "https",
+      hostname,
+    })),
+  },
 };
 
 export default nextConfig;
