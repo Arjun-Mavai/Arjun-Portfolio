@@ -294,7 +294,7 @@ function Skills() {
     if (activeCategory === 'all') {
       return [...skills.frontend, ...skills.backend, ...skills.others]
     }
-    return skills[activeCategory] || []
+    return skills?.[activeCategory as 'frontend' | 'backend' | 'others'] || []
   }
 
   return (
@@ -362,6 +362,12 @@ function Skills() {
   )
 }
 
+// Define the type for the project
+type Project = {
+  title: string;
+  image: string;
+  description: string;
+};
 function Projects() {
   const columnVariants = {
     animate: {
@@ -378,7 +384,7 @@ function Projects() {
   }
 
   // Split projects into three columns
-  const columns = [[], [], []]
+  const columns: Project[][] = [[], [], []]
   projects.forEach((project, index) => {
     columns[index % 3].push(project)
   })

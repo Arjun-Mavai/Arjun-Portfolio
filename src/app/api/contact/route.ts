@@ -37,7 +37,7 @@ export async function POST(req: Request) {
     // Send email to admin
     await transporter.sendMail({
       from: process.env.SMTP_FROM,
-      to: email,
+      to: process.env.SMTP_FROM,
       subject: `New Contact Form Submission from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
       html: `
