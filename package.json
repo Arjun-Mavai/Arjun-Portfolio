@@ -4,9 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    
     "build": "next build",
-
     "start": "next start",
     "lint": "next lint",
     "supabase:generate": "supabase gen types typescript --project-id npnjzfmywierjpxbnehw > database.types.ts"
@@ -26,10 +24,8 @@
     "lucide-react": "^0.454.0",
     "next": "15.0.2",
     "nodemailer": "^6.9.16",
-    
-    "react": "^18",
-    
-    "react-dom": "^18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.1",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.5.4",
