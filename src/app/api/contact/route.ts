@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { supabase } from '@/lib/supabase'
 import nodemailer from 'nodemailer'
 import { generateEmailTemplate } from '@/lib/email-template'
-
+ 
 export async function POST(req: Request) {
   try {
     const body = await req.json()
